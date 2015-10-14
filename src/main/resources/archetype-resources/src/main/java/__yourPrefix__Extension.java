@@ -24,20 +24,20 @@ import com.google.inject.Singleton;
 import static org.eclipse.che.ide.api.action.IdeActions.GROUP_MAIN_MENU;
 
 @Singleton
-@Extension(title = "${classPrefix} Extension", version = "1.0.0")
-public class ${classPrefix}Extension {
+@Extension(title = "${yourPrefix} Extension", version = "1.0.0")
+public class ${yourPrefix}Extension {
 
     @Inject
-    public ${classPrefix}Extension(${classPrefix}Resources resources, ActionManager actionManager, ${classPrefix}Action ${classPrefix}Action) {
+    public ${yourPrefix}Extension(${yourPrefix}Resources resources, ActionManager actionManager, ${yourPrefix}Action ${yourPrefix}Action) {
 
         DefaultActionGroup mainMenu = (DefaultActionGroup) actionManager.getAction(GROUP_MAIN_MENU);
 
-        DefaultActionGroup ${classPrefix}Menu = new DefaultActionGroup("${classPrefix} Menu", true, actionManager);
-        actionManager.registerAction("${classPrefix}MenuID", ${classPrefix}Menu);
-        mainMenu.add(${classPrefix}Menu, Constraints.LAST);
+        DefaultActionGroup ${yourPrefix}Menu = new DefaultActionGroup("${yourPrefix} Menu", true, actionManager);
+        actionManager.registerAction("${yourPrefix}MenuID", ${yourPrefix}Menu);
+        mainMenu.add(${yourPrefix}Menu, Constraints.LAST);
 
-        actionManager.registerAction("${classPrefix}ActionID", ${classPrefix}Action);
-        ${classPrefix}Menu.add(${classPrefix}Action);
+        actionManager.registerAction("${yourPrefix}ActionID", ${yourPrefix}Action);
+        ${yourPrefix}Menu.add(${yourPrefix}Action);
 
     }
 }

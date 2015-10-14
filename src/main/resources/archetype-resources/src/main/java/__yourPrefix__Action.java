@@ -19,18 +19,18 @@ import org.eclipse.che.ide.api.action.ActionEvent;
 import com.google.inject.Inject;
 import org.eclipse.che.ide.api.notification.NotificationManager;
 
-public class ${classPrefix}Action extends Action {
+public class ${yourPrefix}Action extends Action {
 
 private NotificationManager notificationManager;
 
     @Inject
-    public ${classPrefix}Action(${classPrefix}Resources resources, NotificationManager notificationManager) {
-        super("${classPrefix} Action", "${classPrefix} Action Description", null, resources.${classPrefix}ProjectTypeIcon());
+    public ${yourPrefix}Action(${yourPrefix}Resources resources, NotificationManager notificationManager) {
+        super("${yourPrefix} Action", "${yourPrefix} Action Description", null, resources.${yourPrefix}ProjectTypeIcon());
         this.notificationManager = notificationManager;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-            notificationManager.showInfo("It's ${classPrefix} action !");
+            notificationManager.showInfo("It's ${yourPrefix} action !");
     }
 }
